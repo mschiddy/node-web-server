@@ -43,7 +43,16 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
 	res.render('about.hbs', {
 		pageTitle: 'About Page',
-		currentYear: new Date().getFullYear()
+		currentYear: new Date().getFullYear(),
+		text: 'Some text here'
+	});
+});
+
+app.get('/projects', (req, res) => {
+	res.render('about.hbs', {
+		pageTitle: 'Projects Page',
+		currentYear: new Date().getFullYear(),
+		text: 'My awesome projects will be featured here'
 	});
 });
 
